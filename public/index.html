@@ -172,7 +172,7 @@
         Highcharts.chart('container', {
         
         title: {
-            text: 'LiquidityProvider Vs Latency'
+            text: 'Volume Vs Latency'
         },
         
         subtitle: {
@@ -195,19 +195,19 @@
                 label: {
                     connectorAllowed: false
                 },
-                pointStart: 2010
+                pointStart: 5455
             }
         },
         
         series: [{
             name: 'a',
-            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+            data: [705142, 327994, 76200, 935707, 138474, 185060, 762641, 390376,772178,446980,969971]
         }, {
             name: 'b',
-            data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+            data: [885643, 933202, 249879, 174865, 914991, 795901, 869681, 883224, 252742, 609187, 990873]
         }, {
             name: 'c',
-            data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+            data: [96134, 5455, 495201, 746329, 974814, 127546, 82662, 652416, 451144, 740493, 290366]
         }, {
             name: 'd',
             data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
@@ -219,7 +219,7 @@
         responsive: {
             rules: [{
                 condition: {
-                    maxWidth: 500
+                    maxWidth: 1000
                 },
                 chartOptions: {
                     legend: {
