@@ -24,7 +24,13 @@ define(["jquery", "backbone", "models/HomeModel", "views/HomeView", "collections
             index: function() {
 
                 // Instantiates a new view which will render the header text to the page
-                new View();
+
+                // var View = new View({
+                //     model: Model, 
+                //     el: '.magic',
+                //    // template: Handlebars.compile($("#sticky-template").html())
+                // });
+                //new View();
 
             }
 

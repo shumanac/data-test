@@ -1,20 +1,18 @@
 // IndexModel.js
 
-define(["jquery", "backbone"],
+define(["jquery", "backbone", "text!templates/Home.html"],
 
-    function($, Backbone) {
-        var models = {};
+  function($, Backbone) {
+     
+
         // Creates a new Backbone Model class object
         var HomeModel = Backbone.Model.extend({
-
+           
             url: 'http://localhost:1337/api/getData',
-
+        
+       
             initialize: function () {
-                this.bind("reset", function (model, options) {
-                    console.log("Inside event");
-                    console.log(model);
-                    
-                });
+             
 
 
             },
@@ -31,27 +29,36 @@ define(["jquery", "backbone"],
 
         });
 
-        // Returns the Model class
-        //return HomeModel;
 
-        var homeModel = new HomeModel();
-			
-        homeModel.fetch({
+        var HomeModel = new HomeModel();
+			var params;
+        HomeModel.fetch({
             success: function(response,xhr) {
-                 console.log("Inside success");
-                 console.log(response);
+                 //console.log("Inside success");
+                 var params = JSON.stringify(response);
+               //  var data2 = response.toJSON();
+               console.log (params);
+               return params;
+             
             },
             error: function (errorResponse) {
                    console.log(errorResponse)
             }
         });
-       // console.log(homeModel);
+     return HomeModel;
+    
 
 
 
- models.HomeModel = Backbone.Collection.extend({
-    model: models.homeModel
-  });
+
+ 
+
+//   var collection = new Backbone.Collection([
+//             HomeModel
+//   ]);
+  
+//   alert(collection);
+
 
     }
 
